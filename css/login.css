@@ -1,0 +1,51 @@
+:root{
+  --bg:#f3f6fb;
+  --card:#fff;
+  --primary:#0b69ff;
+  --muted:#6b7280;
+  --danger:#e53e3e;
+  --radius:12px;
+  --max-width:420px;
+  --gap:12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:linear-gradient(180deg,var(--bg),#ffffff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  color:#111827;
+}
+.container{width:100%;max-width:var(--max-width)}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 6px 24px rgba(15,23,42,0.08);
+}
+h1{margin:0 0 18px;font-size:20px}
+.field{margin-bottom:14px;position:relative}
+.field label{display:block;margin-bottom:6px;font-size:13px;color:var(--muted)}
+.field input[type='email'],.field input[type='password']{
+  width:100%;padding:10px 12px;border-radius:8px;border:1px solid #e6e9ef;font-size:15px;
+}
+.field .error{display:block;color:var(--danger);font-size:13px;height:18px;margin-top:6px}
+#toggle-password{position:absolute;right:10px;top:38px;background:none;border:none;color:var(--primary);cursor:pointer;padding:6px;font-size:13px}
+.row.between{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.checkbox{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.link{color:var(--primary);text-decoration:none;font-size:14px}
+.actions{margin-top:4px}
+button{font-family:inherit}
+.primary{width:100%;background:var(--primary);color:white;padding:10px;border-radius:8px;border:none;font-weight:600;cursor:pointer}
+.secondary{width:100%;background:transparent;border:1px solid #e6e9ef;padding:10px;border-radius:8px;cursor:pointer}
+.divider{margin:14px 0;text-align:center;color:var(--muted);font-size:13px}
+.alt{margin-bottom:12px}
+.muted{font-size:13px;color:var(--muted);text-align:center}
+@media (max-width:480px){
+  .card{padding:20px}
+  h1{font-size:18px}
+}
